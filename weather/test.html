@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>
+            Weather App!
+        </title>
+        <link rel="stylesheet" href="styles.css">
+ 
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script>
+          $(document).ready(function(){
+            $("#add").click(function(){
+              var city=document.getElementById("city").value;
+              //console.log(city);
+              //console.log("hi");
+              $.ajax({url: 'http://api.openweathermap.org/data/2.5/weather?q='+city+"&appid=47e7b15a2cde82651326ac5b16fc1782",
+               success: function(result){
+                // console.log("bye");
+                 var t=result.main.temp;
+                 t=(t-273).toFixed(2);
+                 var max=result.main.temp_max;
+                 max=(max-273).toFixed(2);
+                $("#temp").html('temp:  '+t +'°C');
+                //$("#h1").html(result.main.temp_min);
+                $("#h2").html('max temp:   '+ max+'°C');
+                
+            
+
+                $("#h3").html('Description: '+ result.weather[0].description);
+                $("#wind").html('wind speed:'+ result.wind.speed +   'km/hr');
+              }});
+            });
+          });
+          </script>
+    </head>
+    <body>
+            <div class="card">
+              <div class="search">
+
+                <input type="text" class="search-bar"  id="city" placeholder="Enter the location">
+                <br>
+                <br>
+               <input type="button" value="Submit" id="add">
+               </div>
+               <div class="current">
+                <h1 id="temp">15<span>°c</span></h1>
+                <h1 id="h2"></h1>
+                <h1 id="h3"></h1>
+              
+                <h1 id="wind"></h1>
+                
+                
+                
+              </div>
+               
+                
+                  
+                
+                </div>
+               
+            
+                
+        
+            </div>
+            
+            
+    </body>
+</html>

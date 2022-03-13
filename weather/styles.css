@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20;
+    font-family: 'Open Sans', sans-serif;
+    background: #222;
+    font-size: 120%;
+    background-image: url('https://www.clubmarine.com.au/articleimages/31-3-Watch-the-weather/$FILE/Watch-the-weather-image1-hero.jpg');
+  }
+  .card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 60px;
+    width: 100%;
+    max-width: 450px;
+    margin: 1em;
+  }
+
+   .input:focus {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+      color: #fff;
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+  .weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+  
+  .weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+  .search input[type="button"] {
+  
+      background-color:darksalmon;
+      border:dimgray;
+      color: white;
+      padding: 15px 40px;
+      text-align:justify;
+      text-decoration: none;
+      display:-moz-inline-stack;
+      font-size: 20px;
+      margin: 20px 8px;
+      cursor: pointer;
+    }
+.current .temp {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 30px 0px;
+  text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+}
+.current .hi-low {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+}
+
